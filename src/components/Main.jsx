@@ -162,9 +162,9 @@ useEffect(()=>{
   
 window.addEventListener("mousemove",(e)=>{
 
-moveRef.current.className="trail"
-moveRef.current.style=`left:${e.clientX - 10}px;
-top:${e.clientY - 10}px;
+// moveRef.current.className="trail"
+moveRef.current.style=`left:${e.clientX - 20}px;
+top:${e.clientY - 30}px;
 border:2px solid white;
 z-index:10;
 `
@@ -179,7 +179,7 @@ z-index:10;
  
   return (
     <MainContainer  >
-         <div ref={moveRef} >
+         <div className='trail' ref={moveRef} >
 
         </div>
    <Container>
@@ -247,7 +247,7 @@ SKILLS
   </BottomBar>
   </Container>
   {
-    click? <Intro/> :null
+    click ? <Intro/> : null
   }
     </MainContainer>
   )
