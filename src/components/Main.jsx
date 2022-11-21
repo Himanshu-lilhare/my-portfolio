@@ -189,7 +189,7 @@ z-index:10;
 
         </div>
    <Container>
-    <PowerButton/>
+   
     <Logo theme={click ?"dark":"light"}/>
     <SocialMediaIcons theme={click ? "dark":"light"}/>
     <Contact clicked={click} target="_blank" to={{pathname:"mailto:rajlilhare200@gmail.com"}} >
