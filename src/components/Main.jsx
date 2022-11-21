@@ -48,13 +48,14 @@ const Contact=styled(Link)`
    color:${props=>props.theme.text};
   position: absolute; top:50%;
   transform: translate(-50%,-50%);
-  right:2rem;
+  right:1rem;
   text-decoration: none; z-index: 1;
 
   @media  only screen and (max-width:791px){
     transform: rotate(90deg);
-    right: 0.5rem;
+    right: -0.3rem;
     top: 60%;
+    font-size:13px ;
     }
 
  ` 
@@ -62,13 +63,14 @@ const Contact=styled(Link)`
 color:${props=>props.clicked?props.theme.body : props.theme.text};
 position:absolute ; top:50%;
 transform: translate(-50%,-50%);
-left:5.5rem;
+left:4.5rem;
 text-decoration: none; z-index: 1;
 
 @media  only screen and (max-width:791px){
     transform: rotate(-90deg);
-    left: 0.5rem;
+    left: -0.5rem;
     top: 40%;
+    font-size:13px ;
     }
 ` 
 const BottomBar=styled.div`
@@ -82,11 +84,15 @@ text-decoration: none; z-index: 1;
 
 @media  only screen and (max-width:791px){
      color: black;
+     font-size:13px ;
     }
 `
 const Skills=styled(Link)`
  color:${props=>props.theme.text};
 text-decoration: none; z-index: 1;
+@media  only screen and (max-width:791px){
+    font-size:13px ;
+    }
 `
 const Rotate=keyframes`
   from{
@@ -98,17 +104,17 @@ const Rotate=keyframes`
 `
 const Change=keyframes`
   from{top: 50%; left: 50%; 
-  } to{top:85%; left: 92%;}
+  } to{top:90%; left: 92%;}
 `
 const BackChange=keyframes`
-  from{top:85%; left: 92%;}
+  from{top:95%; left: 92%;}
   to{ top: 50%;left: 50%;
   }
 `
 
 const Center=styled.button`
 
-  position: absolute; top: ${props => props.clicked ? '85%' : '50%'}; 
+  position: absolute; top: ${props => props.clicked ? '90%' : '50%'}; 
   left:  ${props => props.clicked ? '92%' : '50%'};; transform: translate(-50%,-50%);
   outline : none; border: none;background-color:transparent;
   cursor: pointer;

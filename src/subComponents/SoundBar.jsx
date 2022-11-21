@@ -13,7 +13,7 @@ const SoundBar = () => {
     animation-delay: 0.7s;
  } 
  @media  only screen and (max-width:600px){
-top: 6rem; left: 1rem;
+top: 5rem; left: 0.5rem;
 }
  `
  const updown=keyframes`

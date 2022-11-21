@@ -25,7 +25,7 @@ const Box=styled(motion.div)`
   
  @media  only screen and (max-width:791px){
     flex-direction: column;
-    width: 55vw; height:65vh ; display:flex; 
+    width: 75vw; height:800px ; display:flex; 
 
     background:linear-gradient(to right,${props=>props.theme.body} 50%,
     ${props=>props.theme.text} 50%) bottom,
@@ -81,7 +81,7 @@ justify-content: space-evenly;
 
   return (
    <Box initial={{height:0}}
-   animate={{height:'55vh'}}
+   animate={{height:'65vh'}}
    transition={{type:'spring',duration:2,delay:1 }}
 
    >
