@@ -7,7 +7,7 @@ const SoundBar = () => {
   
  const Box=styled.div`
  display: flex; cursor: pointer; position: fixed; 
- width: 100px; height: 100px;
+ width: 29px; height: 25px;
  top: 2.5rem; left: 14rem; z-index: 10; 
  &>*:nth-child(even){
     animation-delay: 0.7s;
