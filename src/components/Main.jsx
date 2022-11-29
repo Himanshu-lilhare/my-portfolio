@@ -75,21 +75,104 @@ text-decoration: none; z-index: 1;
 ` 
 const BottomBar=styled.div`
   position: absolute; bottom: 1rem; left: 0; right: 0;
- height: 2rem; display: flex;
+ display: flex;
   justify-content: space-evenly; 
+`
+
+const liquid=keyframes`
+  0%{
+    transform: translate(-50%,-75%) rotate(0deg);
+  }
+  100%{
+    transform: translate(-50%,-75%) rotate(360deg);
+  }
 `
 const Projects=styled(Link)`
  color:${props=>props.clicked?props.theme.body : props.theme.text};
-text-decoration: none; z-index: 1;
+text-decoration: none;  border-radius: 10%; border: 0.5px solid grey;
+width: 80px; position: relative; padding: 0.5rem 1.5rem;
+ overflow: hidden; display: flex; align-items: center; justify-content: center;
+ &:hover .liquid{
+  top: -160px;
+}
+&:hover span{
+  color:${props=>props.theme.text}
+ 
+}
+span{
+  color:${props=>props.theme.body} ; z-index: 1; position: relative;
+  font-weight: 600; letter-spacing: 4px; text-align: center; font-size: 15px;
+}
 
-@media  only screen and (max-width:791px){
+.liquid{
+  /* background-color: blue; */
+  position: absolute;
+  left: 0; top: -70px; width:100px; height: 100px; 
+ transition: 0.5s;
+}
+.liquid:before,
+.liquid:after{
+    content: ''; position: absolute; width: 200%; height: 200%;
+    top: 50%; left: 70%;
+    transform: translate(-50%,-75%); background-color: #9897975f;
+
+}
+.liquid:before{
+  border-radius: 45%;
+  background-color: #000000c4;
+  animation: ${liquid} 5s linear infinite;
+  }
+  .liquid:after{
+    border-radius: 35%;
+  background-color: #00000056;
+  animation: ${liquid} 10s linear infinite;
+  }
+ @media  only screen and (max-width:791px){
      color: black;
      font-size:13px ;
     }
 `
 const Skills=styled(Link)`
- color:${props=>props.theme.text};
-text-decoration: none; z-index: 1;
+ color:${props=>props.clicked?props.theme.body : props.theme.text};
+text-decoration: none;  border-radius: 10%; border: 0.5px solid grey;
+width: 80px; display: block; position: relative; padding: 0.5rem 1.5rem;
+ overflow: hidden; 
+ &:hover .liquid{
+  top: -160px;
+}
+&:hover span{
+  color:${props=>props.theme.text}
+ 
+}
+span{
+  color:${props=>props.theme.body} ; z-index: 1; position: relative;
+  font-weight: 600; letter-spacing: 6px; text-align: center; font-size: 15px;
+}
+
+.liquid{
+  /* background-color: blue; */
+  position: absolute;
+  left: 0; top: -70px; width:100px; height: 100px; 
+ transition: 0.5s;
+}
+.liquid:before,
+.liquid:after{
+    content: ''; position: absolute; width: 200%; height: 200%;
+    top: 50%; left: 70%;
+    transform: translate(-50%,-75%); background-color: #9897975f;
+
+}
+.liquid:before{
+  border-radius: 45%;
+  background-color: #000000c4;
+  animation: ${liquid} 5s linear infinite;
+  }
+  .liquid:after{
+    border-radius: 35%;
+  background-color: #00000056;
+  animation: ${liquid} 10s linear infinite;
+  }
+
 @media  only screen and (max-width:791px){
     font-size:13px ;
     }
@@ -232,23 +315,25 @@ ABOUT
 
   <BottomBar>
   <Projects to='/projects' clicked={click}>
-    <motion.h3
-       initial={{y:200}}
-       transition={{type:"spring",duration:1.5,delay:1}}
-       animate={{y:0}}
+    <motion.span
+      //  initial={{y:200}}
+      //  transition={{type:"spring",duration:1.5,delay:1}}
+      //  animate={{y:0}}
     >
 PROJECTS
-   </motion.h3>
+   </motion.span>
+   <div className='liquid'>
+
+   </div>
     </Projects>
  
     <Skills to="/skills" >
-    <motion.h3
-       initial={{y:200}}
-       transition={{type:"spring",duration:1.5,delay:1}}
-       animate={{y:0}}
-    >
-SKILLS
-   </motion.h3>
+    <span>
+  SKILLS
+</span>
+   <div className='liquid'>
+
+</div>
     </Skills>
   </BottomBar>
   </Container>
