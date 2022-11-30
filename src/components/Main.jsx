@@ -88,15 +88,16 @@ const liquid=keyframes`
   }
 `
 const Projects=styled(Link)`
+z-index: 1;
  color:${props=>props.clicked?props.theme.body : props.theme.text};
-text-decoration: none;  border-radius: 10%; border: 0.5px solid grey;
+text-decoration: none;  border-radius: 10%; border: 0.5px solid ${props=>props.clicked ? "white" : "grey"};
 width: 80px; position: relative; padding: 0.5rem 1.5rem;
  overflow: hidden; display: flex; align-items: center; justify-content: center;
  &:hover .liquid{
   top: -160px;
 }
 &:hover span{
-  color:${props=>props.theme.text}
+  color:${props=>props.clicked ? props.theme.body : props.theme.text}
  
 }
 span{
