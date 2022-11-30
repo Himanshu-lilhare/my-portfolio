@@ -97,12 +97,17 @@ width: 80px; position: relative; padding: 0.5rem 1.5rem;
   top: -160px;
 }
 &:hover span{
-  color:${props=>props.clicked ? props.theme.body : props.theme.text}
- 
+  color:${props=>props.clicked ? props.theme.body : props.theme.text};
+  @media  only screen and (max-width:791px){
+     color: black;
+    
+    }
+
 }
 span{
   color:${props=>props.theme.text} ; z-index: 1; position: relative;
   font-weight: 600; letter-spacing: 4px; text-align: center; font-size: 15px;
+ 
 }
 
 .liquid{
