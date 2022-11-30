@@ -100,7 +100,7 @@ width: 80px; position: relative; padding: 0.5rem 1.5rem;
  
 }
 span{
-  color:${props=>props.theme.body} ; z-index: 1; position: relative;
+  color:${props=>props.theme.text} ; z-index: 1; position: relative;
   font-weight: 600; letter-spacing: 4px; text-align: center; font-size: 15px;
 }
 
@@ -119,12 +119,14 @@ span{
 }
 .liquid:before{
   border-radius: 45%;
-  background-color: #000000c4;
+  background-color: #dfdfdfc4;
+  border: .5px solid black;
   animation: ${liquid} 5s linear infinite;
   }
   .liquid:after{
     border-radius: 35%;
-  background-color: #00000056;
+  background-color: #efefef55;
+  border: .5px solid black;
   animation: ${liquid} 10s linear infinite;
   }
  @media  only screen and (max-width:791px){
@@ -145,7 +147,7 @@ width: 80px; display: block; position: relative; padding: 0.5rem 1.5rem;
  
 }
 span{
-  color:${props=>props.theme.body} ; z-index: 1; position: relative;
+  color:${props=>props.theme.text} ; z-index: 1; position: relative;
   font-weight: 600; letter-spacing: 6px; text-align: center; font-size: 15px;
 }
 
@@ -164,12 +166,14 @@ span{
 }
 .liquid:before{
   border-radius: 45%;
-  background-color: #000000c4;
+  background-color: #dfdfdfc4;
+  border: .5px solid black;
   animation: ${liquid} 5s linear infinite;
   }
   .liquid:after{
     border-radius: 35%;
-  background-color: #00000056;
+  background-color: #efefef55;
+  border: .5px solid black;
   animation: ${liquid} 10s linear infinite;
   }
 
